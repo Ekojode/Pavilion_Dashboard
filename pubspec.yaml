@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_fonts: ^3.0.1
   auto_size_text: ^3.0.0
+  flutter_svg: ^1.1.5
 
 dev_dependencies:
   flutter_test:
@@ -63,6 +64,9 @@ flutter:
     - assets/images/pavilion_logo.png
     - assets/images/celebration.png
     - assets/images/profile_image.png
+    - assets/images/chest.png
+    - assets/images/icon_reward.png
+    - assets/images/wallet_icon.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:
