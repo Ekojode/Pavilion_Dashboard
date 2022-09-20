@@ -18,6 +18,7 @@ class DashBoard extends StatelessWidget {
               ? const DesktopHeader()
               : const MobileHeader(),
           Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: const [
               Expanded(flex: 5, child: DashBoardPreview()),
               Expanded(flex: 3, child: CardPreviewSection())
