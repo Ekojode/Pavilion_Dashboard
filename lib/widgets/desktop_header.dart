@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pavilion_dashboard/constants.dart';
+import 'package:pavilion_dashboard/widgets/manrope_text.dart';
 import 'package:provider/provider.dart';
 
 import '../controller/menu_controller.dart';
@@ -19,11 +21,11 @@ class DesktopHeader extends StatelessWidget {
               icon: const Icon(Icons.menu),
               onPressed: context.read<MenuController>().controlMenu,
             ),
-          Text(
-            "DashBoard",
-            style:
-                GoogleFonts.manrope(fontWeight: FontWeight.w700, fontSize: 24),
-          ),
+          const ManRopeText(
+              text: "DashBoard",
+              fontSize: 24,
+              color: deepPurple,
+              fontWeight: FontWeight.w700),
           const Spacer(),
           IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
           IconButton(onPressed: () {}, icon: const Icon(Icons.help_outline)),

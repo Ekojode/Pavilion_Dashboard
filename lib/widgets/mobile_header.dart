@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pavilion_dashboard/widgets/manrope_text.dart';
 
 class MobileHeader extends StatelessWidget {
   const MobileHeader({super.key});
@@ -15,9 +16,11 @@ class MobileHeader extends StatelessWidget {
             backgroundImage: AssetImage("assets/images/profile_image.png"),
           ),
           const SizedBox(width: 5),
-          Text("Hi Janet,",
-              style: GoogleFonts.manrope(
-                  fontWeight: FontWeight.w700, fontSize: 16)),
+          const ManRopeText(
+              text: "Hi Janet,",
+              fontSize: 16,
+              color: Colors.black,
+              fontWeight: FontWeight.w700),
           const Spacer(),
           IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
           IconButton(onPressed: () {}, icon: const Icon(Icons.help_outline)),

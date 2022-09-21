@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pavilion_dashboard/widgets/manrope_text.dart';
 import '../constants.dart';
 
 class RewardConfirmation extends StatelessWidget {
@@ -29,11 +30,11 @@ class RewardConfirmation extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  "Congratulations",
-                  style: GoogleFonts.manrope(
-                      fontWeight: FontWeight.w800, fontSize: 22, color: white),
-                ),
+                const ManRopeText(
+                    text: "Congratulations",
+                    fontSize: 22,
+                    color: white,
+                    fontWeight: FontWeight.w800),
                 SizedBox(
                   width: isMobile ? 120 : 240,
                   child: RichText(

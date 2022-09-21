@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pavilion_dashboard/constants.dart';
+import 'package:pavilion_dashboard/widgets/manrope_text.dart';
 
 class AccountPreview extends StatefulWidget {
   final String title;
@@ -16,28 +18,26 @@ class AccountPreview extends StatefulWidget {
 }
 
 class _AccountPreviewState extends State<AccountPreview> {
+  bool viewBalance = true;
+
+  void switchView() {
+    setState(() {
+      viewBalance = !viewBalance;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    bool viewBalance = true;
-
-    void switchView() {
-      setState(() {
-        viewBalance = !viewBalance;
-      });
-    }
-
     return Card(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       elevation: 1,
       child: ListTile(
         leading: Image.asset(widget.svgPath),
-        title: Text(
-          widget.title,
-          style: GoogleFonts.manrope(
-              fontSize: 22,
-              fontWeight: FontWeight.w700,
-              color: const Color(0xff0D073C)),
-        ),
+        title: ManRopeText(
+            text: widget.title,
+            fontSize: 22,
+            color: deepPurple,
+            fontWeight: FontWeight.w700),
         subtitle: Row(
           children: [
             viewBalance

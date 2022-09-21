@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pavilion_dashboard/widgets/atm_card.dart';
 import 'package:pavilion_dashboard/widgets/image_list.dart';
+import 'package:pavilion_dashboard/widgets/manrope_text.dart';
 import '../constants.dart';
+import 'card_promo.dart';
 
 class CardPreviewSection extends StatelessWidget {
   const CardPreviewSection({super.key});
@@ -16,13 +18,11 @@ class CardPreviewSection extends StatelessWidget {
         children: [
           Row(
             children: [
-              Text(
-                "Cards",
-                style: GoogleFonts.manrope(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w700,
-                    color: deepPurple),
-              ),
+              const ManRopeText(
+                  text: "Cards",
+                  fontSize: 20,
+                  color: deepPurple,
+                  fontWeight: FontWeight.w700),
               const Spacer(),
               IconButton(
                   onPressed: () {}, icon: const Icon(Icons.add_circle_outline))
@@ -30,14 +30,15 @@ class CardPreviewSection extends StatelessWidget {
           ),
           const ATMCard(),
           const SizedBox(height: 5),
-          Text(
-            "Request Gift",
-            textAlign: TextAlign.start,
-            style: GoogleFonts.manrope(
-                fontSize: 20, fontWeight: FontWeight.w700, color: deepPurple),
-          ),
+          const ManRopeText(
+              text: "Request Gift",
+              fontSize: 20,
+              color: deepPurple,
+              fontWeight: FontWeight.w700),
           const SizedBox(height: 5),
-          const ImageList()
+          const ImageList(),
+          const SizedBox(height: 5),
+          const PromoCard(isDesktop: true)
         ],
       ),
     );

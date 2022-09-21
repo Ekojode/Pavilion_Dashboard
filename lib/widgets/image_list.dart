@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pavilion_dashboard/widgets/manrope_text.dart';
 
 class ImageList extends StatelessWidget {
   const ImageList({Key? key}) : super(key: key);
@@ -8,7 +9,7 @@ class ImageList extends StatelessWidget {
     final names = ["Alice", "Alice", "Alice", "Alice", "Alice"];
     final imagePath = [
       "assets/images/max.png",
-      "assets/images/max1.png",
+      "assets/images/max2.png",
       "assets/images/alice.png",
       "assets/images/alice2.png",
       "assets/images/alice3.png",
@@ -35,7 +36,11 @@ Widget buildImage(BuildContext context, String imagePath, String name) {
         backgroundImage: AssetImage(imagePath),
       ),
       const SizedBox(height: 5),
-      Text(name)
+      ManRopeText(
+          text: name,
+          fontSize: 14,
+          color: Colors.black,
+          fontWeight: FontWeight.w700)
     ],
   );
 }

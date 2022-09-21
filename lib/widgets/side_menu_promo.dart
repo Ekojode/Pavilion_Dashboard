@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pavilion_dashboard/widgets/manrope_text.dart';
 import '../constants.dart';
 
 class SMPromo extends StatelessWidget {
@@ -19,7 +20,6 @@ class SMPromo extends StatelessWidget {
         children: [
           Image.asset(
             "assets/images/celebration.png",
-            // scale: 0.5,
           ),
           Positioned(
             top: 100,
@@ -36,27 +36,21 @@ class SMPromo extends StatelessWidget {
             child: Center(
               child: Column(
                 children: [
-                  Text(
-                    "CLAIM YOUR",
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.manrope(
-                      color: white,
+                  const ManRopeText(
+                      text: "CLAIM YOUR",
                       fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  Text("POINTS",
-                      textAlign: TextAlign.center,
-                      style: GoogleFonts.manrope(
-                          color: orange,
-                          fontSize: 22,
-                          fontWeight: FontWeight.bold)),
-                  Text("AND SHOP",
-                      textAlign: TextAlign.center,
-                      style: GoogleFonts.manrope(
-                          color: white,
-                          fontSize: 22,
-                          fontWeight: FontWeight.bold)),
+                      color: white,
+                      fontWeight: FontWeight.bold),
+                  const ManRopeText(
+                      text: "POINTS",
+                      fontSize: 22,
+                      color: orange,
+                      fontWeight: FontWeight.bold),
+                  const ManRopeText(
+                      text: "AND SHOP",
+                      fontSize: 22,
+                      color: white,
+                      fontWeight: FontWeight.bold),
                   const Spacer(),
                   OutlinedButton(
                     onPressed: () {},
