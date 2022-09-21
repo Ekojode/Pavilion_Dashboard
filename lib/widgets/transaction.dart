@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pavilion_dashboard/constants.dart';
 
 class Transactions extends StatefulWidget {
   final bool isMoble;
@@ -39,6 +40,9 @@ class _TransactionsState extends State<Transactions> {
                     ),
                     const Spacer(),
                     DropdownButton(
+                        style: TextStyle(
+                            fontSize: widget.isMoble ? 8 : 14,
+                            color: deepPurple),
                         icon: const Icon(Icons.keyboard_arrow_down),
                         value: dropDownValue,
                         items: items.map((String items) {

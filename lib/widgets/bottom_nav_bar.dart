@@ -11,18 +11,30 @@ class BottomNav extends StatelessWidget {
       height: 75,
       width: double.infinity,
       decoration: const BoxDecoration(
-          color: white,
-          borderRadius: BorderRadius.only(
-              topRight: Radius.circular(8), topLeft: Radius.circular(8))),
-      padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          iconPack("Home", Icons.home_filled, true),
-          iconPack("Payment", Icons.payments_rounded, false),
-          iconPack("Cards", Icons.payment_rounded, false),
-          iconPack("Settings", Icons.settings, false),
+        color: white,
+        boxShadow: [
+          BoxShadow(color: Colors.black38, spreadRadius: 0, blurRadius: 10),
         ],
+        borderRadius: BorderRadius.only(
+          topRight: Radius.circular(20),
+          topLeft: Radius.circular(20),
+        ),
+      ),
+      padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
+      child: ClipRRect(
+        borderRadius: const BorderRadius.only(
+          topRight: Radius.circular(20),
+          topLeft: Radius.circular(20),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            iconPack("Home", Icons.home_filled, true),
+            iconPack("Payment", Icons.payments_rounded, false),
+            iconPack("Cards", Icons.payment_rounded, false),
+            iconPack("Settings", Icons.settings, false),
+          ],
+        ),
       ),
     );
   }
