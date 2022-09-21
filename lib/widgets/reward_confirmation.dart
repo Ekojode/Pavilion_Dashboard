@@ -27,18 +27,12 @@ class RewardConfirmation extends StatelessWidget {
             padding:
                 isMobile ? const EdgeInsets.all(8) : const EdgeInsets.all(16),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(
-                  child: RichText(
-                    text: TextSpan(
-                      text: "Congratulations",
-                      style: GoogleFonts.manrope(
-                          fontWeight: FontWeight.w800,
-                          fontSize: 22,
-                          color: white),
-                    ),
-                    textAlign: TextAlign.start,
-                  ),
+                Text(
+                  "Congratulations",
+                  style: GoogleFonts.manrope(
+                      fontWeight: FontWeight.w800, fontSize: 22, color: white),
                 ),
                 SizedBox(
                   width: isMobile ? 120 : 240,
@@ -63,7 +57,14 @@ class RewardConfirmation extends StatelessWidget {
                   ),
                 ),
                 const Spacer(),
-                OutlinedButton(onPressed: () {}, child: Text("Redeem Now!"))
+                OutlinedButton(
+                    onPressed: () {},
+                    style: OutlinedButton.styleFrom(
+                      side: const BorderSide(color: Color(0xff0D073B)),
+                      backgroundColor: const Color(0xffF7F7FE),
+                      foregroundColor: const Color(0xff0D073B),
+                    ),
+                    child: const Text("Redeem Now!"))
               ],
             ),
           ),

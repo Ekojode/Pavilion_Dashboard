@@ -38,6 +38,7 @@ dependencies:
   auto_size_text: ^3.0.0
   flutter_svg: ^1.1.5
   flutter_credit_card: ^3.0.4
+  provider: ^6.0.3
 
 dev_dependencies:
   flutter_test:
@@ -68,6 +69,11 @@ flutter:
     - assets/images/chest.png
     - assets/images/icon_reward.png
     - assets/images/wallet_icon.png
+    - assets/images/alice.png
+    - assets/images/alice2.png
+    - assets/images/alice3.png
+    - assets/images/max.png
+    - assets/images/max2.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:

@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+
+import '../controller/menu_controller.dart';
+import '../responsive.dart';
 
 class DesktopHeader extends StatelessWidget {
   const DesktopHeader({Key? key}) : super(key: key);
@@ -10,6 +14,11 @@ class DesktopHeader extends StatelessWidget {
       padding: const EdgeInsets.all(16),
       child: Row(
         children: [
+          if (Responsive.isTablet(context))
+            IconButton(
+              icon: const Icon(Icons.menu),
+              onPressed: context.read<MenuController>().controlMenu,
+            ),
           Text(
             "DashBoard",
             style:

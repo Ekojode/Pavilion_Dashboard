@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pavilion_dashboard/widgets/atm_card.dart';
+import 'package:pavilion_dashboard/widgets/image_list.dart';
 import '../constants.dart';
 
 class CardPreviewSection extends StatelessWidget {
@@ -28,13 +29,15 @@ class CardPreviewSection extends StatelessWidget {
             ],
           ),
           const ATMCard(),
-          const SizedBox(height: 10),
+          const SizedBox(height: 5),
           Text(
             "Request Gift",
             textAlign: TextAlign.start,
             style: GoogleFonts.manrope(
                 fontSize: 20, fontWeight: FontWeight.w700, color: deepPurple),
           ),
+          const SizedBox(height: 5),
+          const ImageList()
         ],
       ),
     );

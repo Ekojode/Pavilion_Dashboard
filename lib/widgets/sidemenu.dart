@@ -3,13 +3,14 @@ import 'package:pavilion_dashboard/widgets/side_menu_promo.dart';
 import '../widgets/side_menu_tile.dart';
 
 class SideMenu extends StatelessWidget {
-  const SideMenu({super.key});
+  final bool isDesktop;
+  const SideMenu({super.key, required this.isDesktop});
 
   @override
   Widget build(BuildContext context) {
     return Drawer(
       backgroundColor: const Color(0xffF7F7FE),
-      elevation: 0,
+      elevation: isDesktop ? 0 : 8,
       child: ListView(
         children: [
           SizedBox(

@@ -14,7 +14,7 @@ class DashBoard extends StatelessWidget {
         child: SingleChildScrollView(
       child: Column(
         children: [
-          Responsive.isDesktop(context)
+          Responsive.isDesktop(context) || Responsive.isTablet(context)
               ? const DesktopHeader()
               : const MobileHeader(),
           Row(

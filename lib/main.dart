@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:provider/provider.dart';
+import 'controller/menu_controller.dart';
 import 'screen/main_screen.dart';
 
 void main() {
@@ -17,7 +18,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MultiProvider(providers: [
+        ChangeNotifierProvider(
+          create: (context) => MenuController(),
+        ),
+      ], child: const MyHomePage(title: 'Flutter Demo Home Page')),
     );
   }
 }
