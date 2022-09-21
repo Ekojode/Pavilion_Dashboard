@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pavilion_dashboard/widgets/atm_card.dart';
 import 'package:pavilion_dashboard/widgets/image_list.dart';
 import 'package:pavilion_dashboard/widgets/manrope_text.dart';
+import 'package:pavilion_dashboard/widgets/new_atm_card.dart';
 import '../constants.dart';
 import '../responsive.dart';
 import 'card_promo.dart';
@@ -28,9 +29,10 @@ class CardPreviewSection extends StatelessWidget {
                   onPressed: () {}, icon: const Icon(Icons.add_circle_outline))
             ],
           ),
-          const ATMCard(
-            isMobile: false,
-          ),
+          const NewATM(),
+          // const ATMCard(
+          //   isMobile: false,
+          // ),
           const SizedBox(height: 5),
           const ManRopeText(
               text: "Request Gift",

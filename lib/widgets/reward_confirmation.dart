@@ -40,7 +40,7 @@ class RewardConfirmation extends StatelessWidget {
                     color: white,
                     fontWeight: FontWeight.w800),
                 SizedBox(
-                  width: isMobile ? width * 0.7 : 250,
+                  width: isMobile ? width * 0.7 : 235,
                   child: RichText(
                     text: TextSpan(
                       style: GoogleFonts.manrope(

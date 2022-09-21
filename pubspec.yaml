@@ -78,6 +78,8 @@ flutter:
     - assets/images/spaceship.png
     - assets/images/mobile_rewards.png
     - assets/images/mobile_wallet.png
+    - assets/images/white_logo.png
+    - assets/images/mastercard.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:

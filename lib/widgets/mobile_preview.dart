@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pavilion_dashboard/widgets/atm_card.dart';
 
 import 'package:pavilion_dashboard/widgets/mobile_account_preview.dart';
+import 'package:pavilion_dashboard/widgets/new_atm_card.dart';
 import 'package:pavilion_dashboard/widgets/reward_confirmation.dart';
 import 'package:pavilion_dashboard/widgets/transaction.dart';
 
@@ -23,9 +23,10 @@ class MobilePreview extends StatelessWidget {
             ],
           ),
         ),
-        const ATMCard(
-          isMobile: true,
-        ),
+        const NewATM(),
+        // const ATMCard(
+        //   isMobile: true,
+        // ),
         const Transactions(
           isMoble: true,
         )
