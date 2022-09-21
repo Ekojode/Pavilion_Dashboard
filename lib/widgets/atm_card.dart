@@ -8,7 +8,7 @@ class ATMCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final deviceWidth = MediaQuery.of(context).size.width;
-    final cardWidth = isMobile ? 0.8 * deviceWidth : 0.25 * deviceWidth;
+    final cardWidth = isMobile ? 0.9 * deviceWidth : 0.25 * deviceWidth;
     final cardHeight = cardWidth / 1.6;
     return SizedBox(
         child: CreditCardWidget(
@@ -21,10 +21,6 @@ class ATMCard extends StatelessWidget {
       cvvCode: "123",
       showBackView: false,
       onCreditCardWidgetChange: (creditCardBrand) {},
-
-      // customCardTypeIcons:  [
-      //   CustomCardTypeIcon(cardType: CardType.mastercard, cardImage: cardImage)
-      // ],
     ));
   }
 }

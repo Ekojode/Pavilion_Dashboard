@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pavilion_dashboard/screen/main_dashboard.dart';
+import 'package:pavilion_dashboard/widgets/bottom_nav_bar.dart';
 import 'package:pavilion_dashboard/widgets/sidemenu.dart';
 import 'package:provider/provider.dart';
 import '../controller/menu_controller.dart';
@@ -32,6 +33,15 @@ class MyHomePage extends StatelessWidget {
           ],
         ),
       ),
+      bottomNavigationBar:
+          // Responsive.isMobile(context)
+          //     ? Container(
+          //         height: 100,
+          //         width: double.infinity,
+          //         color: Colors.red,
+          //       )
+          //     : null
+          Responsive.isMobile(context) ? const BottomNav() : null,
     );
   }
 }

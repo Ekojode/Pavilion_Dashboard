@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:pavilion_dashboard/widgets/atm_card.dart';
 import 'package:pavilion_dashboard/widgets/image_list.dart';
 import 'package:pavilion_dashboard/widgets/manrope_text.dart';
