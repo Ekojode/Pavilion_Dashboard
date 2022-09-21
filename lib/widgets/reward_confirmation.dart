@@ -5,9 +5,13 @@ import '../constants.dart';
 
 class RewardConfirmation extends StatelessWidget {
   final double height;
+  final double width;
   final bool isMobile;
   const RewardConfirmation(
-      {super.key, required this.height, required this.isMobile});
+      {super.key,
+      required this.height,
+      this.width = 100,
+      required this.isMobile});
 
   @override
   Widget build(BuildContext context) {
@@ -26,21 +30,21 @@ class RewardConfirmation extends StatelessWidget {
         children: [
           Container(
             padding:
-                isMobile ? const EdgeInsets.all(8) : const EdgeInsets.all(16),
+                isMobile ? const EdgeInsets.all(12) : const EdgeInsets.all(16),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const ManRopeText(
+                ManRopeText(
                     text: "Congratulations",
-                    fontSize: 22,
+                    fontSize: isMobile ? 12 : 22,
                     color: white,
                     fontWeight: FontWeight.w800),
                 SizedBox(
-                  width: isMobile ? 120 : 240,
+                  width: isMobile ? width * 0.7 : 250,
                   child: RichText(
                     text: TextSpan(
                       style: GoogleFonts.manrope(
-                          fontSize: 14,
+                          fontSize: isMobile ? 8 : 14,
                           fontWeight: FontWeight.w700,
                           color: white),
                       children: const [
@@ -70,7 +74,14 @@ class RewardConfirmation extends StatelessWidget {
             ),
           ),
           const Spacer(),
-          SizedBox(width: 150, child: Image.asset("assets/images/chest.png"))
+          SizedBox(
+            width: isMobile ? width * 0.3 : 200,
+            height: isMobile ? 90 : null,
+            child: Image.asset(
+              "assets/images/chest.png",
+              fit: BoxFit.cover,
+            ),
+          )
         ],
       ),
     );

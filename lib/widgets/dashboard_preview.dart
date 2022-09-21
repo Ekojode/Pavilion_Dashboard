@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:pavilion_dashboard/constants.dart';
 
 import 'package:pavilion_dashboard/widgets/account_preview.dart';
 import 'package:pavilion_dashboard/widgets/reward_confirmation.dart';
@@ -18,6 +19,8 @@ class DashBoardPreview extends StatelessWidget {
               children: const [
                 Expanded(
                   child: AccountPreview(
+                      isMobile: false,
+                      bgColor: white,
                       title: "Wallet Balance",
                       svgPath: "assets/images/wallet_icon.png",
                       balance: 2342.00),
@@ -25,6 +28,8 @@ class DashBoardPreview extends StatelessWidget {
                 SizedBox(width: 10),
                 Expanded(
                     child: AccountPreview(
+                  isMobile: false,
+                  bgColor: white,
                   title: "Reward Balance",
                   svgPath: "assets/images/icon_reward.png",
                   balance: 2342.00,
@@ -34,7 +39,9 @@ class DashBoardPreview extends StatelessWidget {
             const SizedBox(height: 10),
             const RewardConfirmation(height: 150, isMobile: false),
             const SizedBox(height: 10),
-            const Transactions()
+            const Transactions(
+              isMoble: false,
+            )
           ],
         ),
       ),

@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_credit_card/flutter_credit_card.dart';
 
 class ATMCard extends StatelessWidget {
-  const ATMCard({super.key});
+  final bool isMobile;
+  const ATMCard({super.key, required this.isMobile});
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size.height;
-    final cardHeight = size * 0.375;
-    const cardWidth = double.infinity;
+    final deviceWidth = MediaQuery.of(context).size.width;
+    final cardWidth = isMobile ? 0.8 * deviceWidth : 0.25 * deviceWidth;
+    final cardHeight = cardWidth / 1.6;
     return SizedBox(
         child: CreditCardWidget(
       cardType: CardType.mastercard,

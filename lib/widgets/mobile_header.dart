@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:pavilion_dashboard/constants.dart';
 import 'package:pavilion_dashboard/widgets/manrope_text.dart';
 
 class MobileHeader extends StatelessWidget {
@@ -7,7 +7,8 @@ class MobileHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return Container(
+      color: white,
       padding: const EdgeInsets.all(8),
       child: Row(
         children: [

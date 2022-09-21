@@ -76,6 +76,8 @@ flutter:
     - assets/images/max2.png
     - assets/images/space.png
     - assets/images/spaceship.png
+    - assets/images/mobile_rewards.png
+    - assets/images/mobile_wallet.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:
